@@ -1,0 +1,91 @@
+{
+  "useProfile": "auto",
+  "coordinator": {
+    "address": "LALFYTKTCDNPTRXXYJSXOPQXEFUHJISQMBQTVZPLUOEABSNLXINIDIOJGJANCORNATZYBXXQKJXGMXUBA",
+    "securityLevel": 2,
+    "merkleTreeDepth": 24,
+    "mwm": 1,
+    "stateFilePath": "coordinator.state",
+    "merkleTreeFilePath": "coordinator.tree",
+    "intervalSeconds": 2,
+    "checkpoints": {
+      "maxTrackedTails": 10000
+    }
+  },
+  "httpAPI": {
+    "basicAuth": {
+      "enabled": false,
+      "username": "",
+      "passwordHash": "",
+      "passwordSalt": ""
+    },
+    "excludeHealthCheckFromAuth": false,
+    "permitRemoteAccess": [
+      "getNodeInfo",
+      "getBalances",
+      "checkConsistency",
+      "getTipInfo",
+      "getTransactionsToApprove",
+      "getInclusionStates",
+      "getNodeAPIConfiguration",
+      "wereAddressesSpentFrom",
+      "broadcastTransactions",
+      "findTransactions",
+      "storeTransactions",
+      "getTrytes"
+    ],
+    "permittedRoutes": [
+      "healthz"
+    ],
+    "whitelistedAddresses": [],
+    "bindAddress": "0.0.0.0:14265",
+    "limits": {
+      "bodyLengthBytes": 1000000,
+      "findTransactions": 1000,
+      "getTrytes": 1000,
+      "requestsList": 1000
+    }
+  },
+  "dashboard": {
+    "bindAddress": "0.0.0.0:8081",
+    "theme": "default",
+    "basicAuth": {
+      "enabled": false,
+      "username": "",
+      "passwordHash": "",
+      "passwordSalt": ""
+    }
+  },
+  "snapshots": {
+    "loadType": "global",
+    "global": {
+      "path": "snapshot.csv",
+      "spentAddressesPaths": [],
+      "index": 0
+    }
+  },
+  "spentAddresses": {
+    "enabled": true
+  },
+  "network": {
+    "preferIPv6": false,
+    "gossip": {
+      "bindAddress": "0.0.0.0:15600",
+      "reconnectAttemptIntervalSeconds": 60
+    }
+  },
+  "node": {
+    "alias": "",
+    "showAliasInGetNodeInfo": false,
+    "disablePlugins": ["Autopeering"],
+    "enablePlugins": ["Coordinator"]
+  },
+  "logger": {
+    "level": "info",
+    "disableCaller": true,
+    "encoding": "console",
+    "outputPaths": [
+      "stdout"
+    ]
+  }
+}
