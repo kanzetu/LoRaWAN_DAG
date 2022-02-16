@@ -31,8 +31,8 @@ The data channels between all gateways and Network server are vulnerable due to 
 
 ### Setup
 ```bash
-git clone
-cd
+git clone github.com/kanzetu/LoRaWAN_DAG
+cd LoRaWAN_DAG
 ```
 #### Hornet
 - Start hornet coordinator
