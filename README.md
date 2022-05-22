@@ -1,6 +1,8 @@
 # LoRaWAN DAG
 
 ### Introduction
+**This repository is for education prepose and contain my Final Year Project that proposed a security enhanced IoT infrastructure for LoRaWAN.**
+
 This project proposed a low-letancy secure data transmission channels within LoRaWAN infrastructure, by integrating DAG-chain.
 
 The data channels between all gateways and Network server are vulnerable due to unsecure UDP channels. By implenmenting DAG-chain, discentralized ledger for all packets can provide self validation. Also, all packet is additional secured with RSA and AES to avoid sniffing.
